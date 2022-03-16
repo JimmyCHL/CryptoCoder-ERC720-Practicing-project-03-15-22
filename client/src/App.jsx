@@ -36,7 +36,9 @@ const App = () => {
 
   //Load the contract
   const loadWeb3Contract = async (web3) => {
+    //get current Network Id
     const networkId = await web3.eth.net.getId();
+    console.log(networkId);
     const networkData = CryptoCoders.networks[networkId];
     // console.log(networkData);
     if (networkData) {
